@@ -1,0 +1,32 @@
+.community{
+  &-hero{
+    position: relative;
+    &__title{
+      display: flex;
+      align-items: center;
+      font: $font-xl-title;
+      &:nth-of-type(1){
+        color: #A6E7FF;
+
+      }
+      &:nth-of-type(2){
+        color: #A6E7FF;
+        span{
+          color: #00A4FF;
+        }
+      }
+      &:nth-of-type(3){
+        color: #00A4FF;
+      }
+    }
+  }
+  .sub-title{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font: $font-h2;
+    background: #F0C31A;
+    color: #2C2A2A;
+  }
+}
+

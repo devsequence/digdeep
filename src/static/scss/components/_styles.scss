@@ -1,0 +1,266 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font: $font-body;
+  color: $white;
+
+  background-color: $black;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  overflow-x: hidden;
+  &.is-scroll{
+    overflow: hidden;
+  }
+}
+.page-content{
+  width: calc(100% - 60rem);
+  margin-left: 60rem;
+  font-size: 16rem;
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: $font-Railroad-Gothic-ATF;
+}
+//h1 {
+//  font-size: 38px;
+//  line-height: 38px;
+//  color: $default;
+//}
+//
+//h2 {
+//  font-size: 32px;
+//  line-height: 32px;
+//  color: $default;
+//}
+//
+//h3 {
+//  font-size: 18px;
+//  line-height: 26px;
+//  color: $default;
+//}
+//
+//h4 {
+//  font-size: 16px;
+//  line-height: 28px;
+//  color: $default;
+//}
+//
+//h5 {
+//  font-size: 16px;
+//  line-height: 26px;
+//  color: $default;
+//}
+//
+//h6 {
+//  font-size: 14px;
+//  line-height: 21px;
+//  color: $default;
+//}
+
+p {
+}
+
+img {
+  display: block;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+section {
+  position: relative;
+  padding: 40px 0;
+  z-index: 1;
+}
+
+.row.min {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.row.min > div[class^="col-"] {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.overflow {
+  overflow: hidden !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+
+.clearfix {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+a,
+button,
+input,
+select,
+textarea,
+span,
+.icon {
+  transition: all 150ms ease;
+}
+button{
+  cursor: pointer;
+}
+.orange{
+  background-color: $orange;
+  .title-section{
+    color: #7A54A2;
+  }
+  .text-section{
+    color: #2C2A2A;
+  }
+}
+.green{
+  background-color: $green;
+  .title-section{
+    color: $yellow;
+  }
+  .text-section{
+    color: #2C2A2A;
+  }
+}
+.yellow{
+  background-color: $yellow;
+  .title-section{
+    color: $red-100;
+  }
+  .text-section{
+    color: #2C2A2A;
+  }
+}
+.title-section{
+  font: $font-h1;
+}
+.text-section{
+ font: $font-body;
+}
+
+
+.banner-image{
+  background-size: cover;
+  background-position: top center;
+  height: 100vh;
+  padding: 0;
+  .container{
+    height: inherit;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &.orange{
+    .banner-media__title {
+      color: #2C2A2A;
+      background-color: $orange;
+    }
+  }
+  &.green{
+    .banner-media__title {
+      color: #2C2A2A;
+      background-color: $green;
+    }
+  }
+  &.yellow{
+    .banner-media__title {
+      color: #2C2A2A;
+      background-color: $yellow;
+    }
+  }
+}
+.banner-media{
+  display: flex;
+  align-items: center;
+  &__title{
+    font: $font-h2SansSerif;
+  }
+}
+.section-hero{
+  padding: 125rem 0 0 0;
+  .title-section{
+    max-width: 1190rem;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+  }
+  .text-section{
+    margin: 0 auto 0;
+    max-width: 648rem;
+
+  }
+  &__media{
+    margin: -40rem auto 15rem;
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    span{
+      display: inline-block;
+      &:nth-of-type(1){
+        position: relative;
+        z-index: 2;
+      }
+      &:nth-of-type(2){
+        position: absolute;
+        left: 150rem;
+        right: auto;
+        margin: 0;
+        bottom: 25rem;
+      }
+      &:nth-of-type(3){
+        position: absolute;
+        left: auto;
+        right: 250rem;
+        margin: 0;
+        top: 25rem;
+      }
+    }
+  }
+}
+.section-hero-left{
+  padding: 125rem 0 0;
+  &.padding{
+    padding: 125rem 0;
+  }
+  .section-wrap{
+    display: flex;
+    align-items: center;
+  }
+  .title-section{
+    max-width: 80%;
+  }
+  .text-section{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    max-width: 424rem;
+    margin: 0 auto;
+  }
+  .media-section{}
+}
+.section-hero-banner{
+  padding: 125rem 0 0;
+  img, picture{
+    width: 100%;
+  }
+}

@@ -1,0 +1,176 @@
+.hero{
+  padding: 0;
+  min-height: 100vh;
+
+  &-media{
+    &__item{
+      position: absolute;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      &:nth-of-type(1){
+        top: 58rem;
+        left: 142rem;
+        width: 294.58rem;
+        height: 294.12rem;
+      }
+      &:nth-of-type(2){
+        top: 46rem;
+        right: 57rem;
+        width: 424rem;
+        height: 391.71rem;
+      }
+      &:nth-of-type(3){
+        bottom: 32rem;
+        left: 60rem;
+        width: 309rem;
+        height: 357rem;
+      }
+      &:nth-of-type(4){
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 360rem 0 auto;
+        width: 424rem;
+        height: 254rem;
+      }
+    }
+  }
+  &:before{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00BBFF;
+    z-index: -2;
+  }
+  &:after{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/general/grad-hero.svg') no-repeat bottom;
+    background-size: cover;
+    z-index: -1;
+  }
+}
+
+.hero-info{
+  span{
+    display: inline-block;
+    font-size: 50rem;
+    color: $white;
+    background: #2C2A2A;
+    position: absolute;
+    z-index: 2;
+    &:nth-of-type(1){
+      left: 334rem;
+      top: 272rem;
+      padding: 10rem;
+      img {
+        max-width: 199.74rem;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    &:nth-of-type(2){
+      line-height: 100%;
+      left: 515rem;
+      top: 321rem;
+      font: 400 125rem / 90% $font-Railroad-Gothic-ATF;
+
+    }
+    &:nth-of-type(3){
+      line-height: 100%;
+      left: 725rem;
+      top: 426rem;
+      font: 500 150rem / 90% $font-Founders-Grotesk-Medium;
+    }
+    &:nth-of-type(4){
+      font: 400 150rem / 90% $font-Signifier-Regular;
+      line-height: 100%;
+      left: 378rem;
+      top: 555rem;
+    }
+  }
+}
+.mission{
+  padding: 0;
+  height: auto;
+  .grad-bottom{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: url('../images/general/grad-mis.svg') no-repeat bottom;
+    background-size: cover;
+  }
+  &-wrap{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &-title{
+   color: $white-100;
+    font: 400 50rem / 90% $font-Signifier-Regular;
+    text-align: center;
+  }
+  &-inner{}
+  &-item{
+    height: auto;
+    display: flex;
+    align-items: center;
+    span{
+      color: $white-100;
+      font: 400 50rem / 90% $font-Signifier-Regular;
+    }
+    &:nth-of-type(1){
+      justify-content: flex-end;
+    }
+    &:nth-of-type(2){
+      justify-content: center;
+      span{
+        max-width: 862rem;
+
+      }
+    }
+    &:nth-of-type(3){
+      justify-content: flex-end;
+    }
+    &:nth-of-type(4){
+      justify-content: flex-end;
+    }
+  }
+  &-list{
+    &__item{
+      position: relative;
+      padding-left: 100rem;
+      display: flex;
+      max-width: 879rem;
+      margin: 0 0 0 auto;
+    }
+    &-desc{}
+    &__title{
+      font: $font-h3;
+
+    }
+    &__text{}
+  }
+  &-media{
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  &-number{
+    font: $font-h1;
+  }
+}
