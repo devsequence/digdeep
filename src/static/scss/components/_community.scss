@@ -22,11 +22,14 @@
   }
   .sub-title{
     position: absolute;
-    top: 0;
+    top: 10rem;
     left: 0;
     font: $font-h2;
     background: #F0C31A;
     color: #2C2A2A;
+    &.green{
+      background-color: #54B848;
+    }
   }
 }
 
