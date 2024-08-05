@@ -11,6 +11,31 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  &:after{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $black;
+    z-index: -1;
+  }
+  &-logo{
+    max-width: 25.82rem;
+    max-height: 135rem;
+    width: 100%;
+    height: 100%;
+    &__image{
+      width: 100%;
+    }
+    img, svg{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+    }
+  }
   &-button{
     color: #F9F8F8;
     transform: rotate(90deg);
@@ -72,14 +97,12 @@
   &-nav{
     position: absolute;
     left: -101vw;
-    opacity: 0;
     top: 0;
-    visibility: hidden;
-    z-index: -1;
+    z-index: -2;
     background: $black;
     height: 100vh;
     width: calc(100vw - 60rem);
-    transition: all ease 300ms;
+    transition: all ease 550ms;
     color: #F9F8F8;
     &__wrap{
       height: 100%;
@@ -125,8 +148,7 @@
     &.open{
       position: fixed;
       left: 60rem;
-      opacity: 1;
-      visibility: visible;
+
     }
   }
 }
