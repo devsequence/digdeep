@@ -27,6 +27,7 @@
     font: $font-h2;
     background: #F0C31A;
     color: #2C2A2A;
+    z-index: 2;
     &.green{
       background-color: #54B848;
     }
@@ -45,6 +46,7 @@
     max-width: 646rem;
     margin: 0 auto;
   }
+}
 .parallax-wrap{
   position: absolute;
   width: 100%;
@@ -59,7 +61,18 @@
     right: 0;
     position: absolute;
   }
-}
+  &.parallax-wrap-top{
+    bottom: auto;
+    top: 0;
+    .left{
+      top: 0;
+      left: 0;
+    }
+    .right{
+      bottom: auto;
+      top: 0;
+    }
+  }
 }
 .list{
   &-item{
@@ -116,24 +129,44 @@
 .is-inview{
   opacity: calc(1 - var(--progress));
 }
-
+.community-hero__title{
+  position: relative;
+  background-color: $black;
+  padding: 0 60rem;
+  z-index: 1;
+  &:nth-of-type(1){
+    z-index: 1;
+  }
+  &:nth-of-type(2){
+    z-index: 3;
+  }
+  &:nth-of-type(3){
+    z-index: 3;
+  }
+}
 .community-top{
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 0;
   right: 0;
+  z-index: 2;
+  transition: all ease 300ms;
   opacity: 0;
   img{
     width: 100%;
     object-fit: cover;
   }
+  &.active{
+    top: 0;
+  }
 }
 .community-bottom{
-  opacity: 0;
   position: absolute;
-  bottom: 0;
+  top: 50%;
   left: 0;
   right: 0;
+  z-index: 4;
+  opacity: 0;
   img{
     width: 100%;
     object-fit: cover;

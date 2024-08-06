@@ -413,6 +413,27 @@ $wave-color: #FF5AA1;
   left: 0;
   right: 0;
   margin: 0 auto;
+  &.wave-right{
+    top: 320rem;
+    left: auto;
+    right: -370rem;
+    .wave {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 114rem;
+      height: 114rem;
+      margin-top: 0;
+      margin-left: 0;
+      animation: waveRight 6s infinite;
+      &:nth-child(2) {
+        animation: waveRight 2s infinite;
+      }
+      &:nth-child(3) {
+        animation: waveRight 4s infinite;
+      }
+    }
+  }
 }
 .wave {
   position: absolute;
@@ -426,6 +447,7 @@ $wave-color: #FF5AA1;
   border-radius: 50%;
   opacity: 0;
   animation: wave 6s infinite;
+
   &:nth-child(2) {
     animation-delay: 2s;
   }
@@ -447,6 +469,22 @@ $wave-color: #FF5AA1;
     height: 1600rem;
     margin-top: -800rem;
     margin-left: -800rem;
+    opacity: 0;
+  }
+}
+@keyframes waveRight {
+  0% {
+    width: 114rem;
+    height: 114rem;
+    margin-top: 50rem;
+    margin-left: 50rem;
+    opacity: 0.6;
+  }
+  100% {
+    width: 444rem;
+    height: 444rem;
+    margin-top: 200rem;
+    margin-left: 200rem;
     opacity: 0;
   }
 }
@@ -612,5 +650,102 @@ $wave-color: #FF5AA1;
     background-color: $black-100;
     font:  500 50rem / 100% $font-Founders-Grotesk-Medium;
     text-decoration: underline;
+  }
+}
+.parallax-section-test {
+  position: relative;
+  height: 100vh;
+  background-color: #f0f0f0;
+  overflow: hidden; /* Додаємо, щоб зображення не виходили за межі секції */
+}
+
+.text {
+  font-size: 5em;
+  text-align: center;
+  margin: 100px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.parallax-sectionimage {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  opacity: 0.7;
+  transition: top 0.3s ease-out;
+}
+
+.parallax-sectionimage1 {
+  top: 100%;
+}
+
+.parallax-sectionimage2 {
+  top: 150%;
+}
+
+.drop-inner{
+  width: 71px;
+  height: 71px;
+  overflow: hidden;
+  border: 3rem solid $black-100;
+  border-top: 0;
+}
+.drop-container {
+  position: relative;
+  width: 100px;
+  height: 400px; /* Висота контейнера */
+  overflow: hidden;
+  top: -130px;
+  left: -10px;
+}
+
+.drop-wrap {
+  display: flex;
+  flex-direction: column;
+  animation: move 4s linear infinite;
+}
+
+.drop {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(50%);
+  }
+}
+
+.drop-whale{
+  width: 71px;
+  height: 71px;
+  overflow: hidden;
+  border: 3rem solid $black-100;
+}
+.drop-container-whale {
+  position: relative;
+  width: 145px;
+  height: 70px;
+  overflow: hidden;
+  left: -70px;
+  top: -1px;
+}
+
+.drop-wrap-whale {
+  display: flex;
+  column-gap: 5px;
+  animation: moveWhale 4s linear infinite;
+}
+
+
+@keyframes moveWhale {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50%);
   }
 }
