@@ -40,8 +40,8 @@ window.addEventListener('progressEvent', (e) => {
   const { target, progress } = e.detail;
   console.log(progress);
 
-  $('.community-top').css('top', -progress * 100 + 40 + '%');
-  $('.community-top').css('opacity', progress + .8);
+  $('.community-top').css('top', -progress * 100 + 20 + '%');
+  $('.community-top').css('opacity', progress + .7);
   $('.community-bottom').css('top', -progress * 100 + 20 + '%');
   $('.community-bottom').css('opacity', progress + .7);
 });
