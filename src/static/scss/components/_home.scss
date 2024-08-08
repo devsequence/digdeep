@@ -180,9 +180,11 @@
     height: auto;
     display: flex;
     align-items: center;
+
     span{
       color: $white-100;
       font: 400 50rem / 90% $font-Signifier-Regular;
+      padding-left: 20rem;
     }
     &:nth-of-type(1){
       justify-content: flex-end;

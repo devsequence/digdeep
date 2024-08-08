@@ -1,13 +1,14 @@
 .community{
+  z-index: 2;
   &-hero{
+    height: 100vh;
     position: relative;
     &__title{
       display: flex;
       align-items: center;
-      font: $font-xl-title;
+      font: 400 284rem / 60% $font-Railroad-Gothic-ATF;
       &:nth-of-type(1){
         color: #A6E7FF;
-
       }
       &:nth-of-type(2){
         color: #A6E7FF;
@@ -23,7 +24,7 @@
   .sub-title{
     position: absolute;
     top: 10rem;
-    left: 0;
+    left: 60rem;
     font: $font-h2;
     background: #F0C31A;
     color: #2C2A2A;
@@ -161,26 +162,51 @@
   right: 0;
   z-index: 2;
   transition: all ease 300ms;
-  opacity: 0;
-  transform: translateY(50rem);
+  opacity: 1;
   img{
     width: 100%;
     object-fit: cover;
   }
   &.active{
-    top: 0;
+    top: -15%;
+    z-index: 3;
   }
 }
 .community-bottom{
   position: absolute;
-  top: 50%;
+  top: 100%;
   left: 0;
   right: 0;
   z-index: 4;
-  opacity: 0;
-  transform: translateY(460rem);
+  opacity: 1;
+  transition: all ease 300ms;
+  &.active{
+    top: 35%;
+  }
   img{
     width: 100%;
     object-fit: cover;
+  }
+}
+.community-arrow{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  width: auto;
+  max-width: 160rem;
+  z-index: 6;
+  animation: moveArrow 4s linear infinite;
+}
+@keyframes moveArrow {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(20%);
+  }
+  100% {
+    transform: translateY(0%);
   }
 }

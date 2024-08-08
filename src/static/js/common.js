@@ -39,9 +39,11 @@ $('.header-nav a').on('click', function (e) {
 window.addEventListener('progressEvent', (e) => {
   const { target, progress } = e.detail;
   console.log(progress);
-
-  $('.community-top').css('top', -progress * 100 + 20 + '%');
-  $('.community-top').css('opacity', progress + .7);
-  $('.community-bottom').css('top', -progress * 100 + 20 + '%');
-  $('.community-bottom').css('opacity', progress + .7);
+  if(progress >= .32){
+    $('.community-top').css('opacity', '1').addClass('active');
+    $('.community-bottom').css('opacity', '1').addClass('active');
+  }else{
+    $('.community-bottom').css('opacity', '1').removeClass('active');
+    $('.community-top').css('opacity', '1').removeClass('active');
+  }
 });
