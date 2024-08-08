@@ -72,16 +72,16 @@
       }
     }
     &:hover{
-      color: #007AFF;
+      color: #00BBFF;
       span{
         &:nth-of-type(2){
           &:after{
-            background-image: url("data:image/svg+xml,%3Csvg width='10' height='16' viewBox='0 0 10 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='1.00012' y1='15.166' x2='1.00012' y2='0.166016' stroke='%23007AFF' stroke-width='2'/%3E%3Cline x1='5.00037' y1='15.166' x2='5.00037' y2='0.166016' stroke='%23007AFF' stroke-width='2'/%3E%3Cline x1='8.99988' y1='15.166' x2='8.99988' y2='0.166016' stroke='%23007AFF' stroke-width='2'/%3E%3C/svg%3E%0A");
+            background-image: url("data:image/svg+xml,%3Csvg width='10' height='16' viewBox='0 0 10 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='1.00012' y1='15.166' x2='1.00012' y2='0.166016' stroke='%2300BBFF' stroke-width='2'/%3E%3Cline x1='5.00037' y1='15.166' x2='5.00037' y2='0.166016' stroke='%2300BBFF' stroke-width='2'/%3E%3Cline x1='8.99988' y1='15.166' x2='8.99988' y2='0.166016' stroke='%2300BBFF' stroke-width='2'/%3E%3C/svg%3E%0A");
           }
         }
         &:nth-of-type(1){
           &:after{
-            background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='1.2928' y1='14.6425' x2='14.6423' y2='1.29304' stroke='%23007AFF' stroke-width='2'/%3E%3Cline x1='0.707076' y1='1.33196' x2='14.0565' y2='14.6814' stroke='%23007AFF' stroke-width='2'/%3E%3C/svg%3E%0A");
+            background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='1.2928' y1='14.6425' x2='14.6423' y2='1.29304' stroke='%2300BBFF' stroke-width='2'/%3E%3Cline x1='0.707076' y1='1.33196' x2='14.0565' y2='14.6814' stroke='%2300BBFF' stroke-width='2'/%3E%3C/svg%3E%0A");
           }
         }
       }
@@ -101,7 +101,7 @@
     z-index: -2;
     background: $black;
     height: 100vh;
-    width: calc(100vw - 60rem);
+    width: calc(80vw - 60rem);
     transition: all ease 550ms;
     color: #F9F8F8;
     &__wrap{
@@ -148,7 +148,6 @@
     &.open{
       position: fixed;
       left: 60rem;
-
     }
   }
 }

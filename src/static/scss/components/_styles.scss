@@ -8,7 +8,7 @@ body {
   background-color: $black;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   &.is-scroll{
     overflow: hidden;
   }
@@ -748,4 +748,12 @@ $wave-color: #FF5AA1;
   100% {
     transform: translateX(50%);
   }
+}
+.item-block{
+  position: relative;
+  .banner-media__title{
+    position: sticky;
+    top: 0;
+  }
+  &.orange{}
 }
