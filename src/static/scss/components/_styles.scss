@@ -182,7 +182,7 @@ button{
       text-decoration: underline;
       color: #99FD89;
       font-style: italic;
-      font: 400 24rem / 100% $font-Signifier-Regular;
+      font: 400 24rem / 100% $font-Signifier-Regular-Italic;
     }
   }
 }
@@ -1209,4 +1209,25 @@ $wave-color: #FF5AA1;
 
 @keyframes circle-chart-fill {
   to { stroke-dasharray: 0 100; }
+}
+#section2, #section3{
+  .community-hero__center{
+    .community-hero__title{
+      span{
+        color: #00A4FF;
+      }
+    }
+  }
+  .community-hero__bottom{
+    .community-hero__title{
+        color: #00A4FF;
+    }
+  }
+}
+#section4{
+  .community-hero__bottom{
+    .community-hero__title{
+        color: #00A4FF;
+    }
+  }
 }
