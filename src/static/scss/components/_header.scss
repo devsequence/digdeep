@@ -43,6 +43,7 @@
     cursor: pointer;
     font: $font-NavElementsSansSerif;
     transition: all ease 300ms;
+
     span{
       position: relative;
       &:after{
@@ -130,6 +131,9 @@
       color: #F9F8F8;
       padding-left: 100rem;
       position: relative;
+      display: inline-block;
+      background: transparent;
+      text-align: left;
       &:before{
         position: absolute;
         content: '';
