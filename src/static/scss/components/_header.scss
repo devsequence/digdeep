@@ -105,6 +105,7 @@
     width: calc(80vw - 60rem);
     transition: all ease 550ms;
     color: #F9F8F8;
+    border-right: 1rem solid #F9F8F8;
     &__wrap{
       height: 100%;
       display: flex;
@@ -152,6 +153,20 @@
     &.open{
       position: fixed;
       left: 60rem;
+
+    }
+  }
+  &-overlay{
+    left: -101vw;
+    position: fixed;
+    width: 100vw;
+    top: -10vh;
+    transition: all ease 550ms;
+    height: 120vh;
+    z-index: -3;
+    background-color: rgba($black, .8);
+    &.open{
+      left: 0;
     }
   }
 }

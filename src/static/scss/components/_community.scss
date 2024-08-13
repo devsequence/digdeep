@@ -1,6 +1,8 @@
 .community{
   z-index: 2;
-  height: 200vh;
+  height: 1130rem;
+  padding: 0;
+  background-color: black;
   &-hero{
     &__top{
       top: 0;
@@ -41,8 +43,10 @@
     top: 10rem;
     left: 60rem;
     font: $font-h2;
+    clip-path: polygon( 0% 0%,100% 0%,99.647% 54.688%,98.236% 100%,0% 100%,0% 35.938%,0% 0% );
     background: #F0C31A;
     color: #2C2A2A;
+    padding: 3rem 5rem;
     z-index: 2;
     &.green{
       background-color: #54B848;
@@ -147,10 +151,12 @@
     h3{
       font: $font-h3;
       color: $black-100;
+      margin-bottom: 15rem;
     }
     p{
       font: $font-body;
       color: $black-100;
+      margin-bottom: 10rem;
     }
   }
 }
@@ -158,9 +164,22 @@
   opacity: calc(1 - var(--progress));
 }
 .community-hero__title{
-  background-color: $black;
   padding: 0 60rem;
   z-index: 1;
+  position: relative;
+
+  &:before{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    width: 100%;
+    max-height: 200rem;
+    height: 100%;
+    background-color: $black;
+    z-index: -1;
+    transform: translate(0, -50%);
+  }
   &:nth-of-type(1){
     z-index: 1;
   }
@@ -170,10 +189,22 @@
   &:nth-of-type(3){
     z-index: 4;
   }
+  span{
+    img{
+      width: 100%;
+    }
+  }
+}
+.community-arrow{
+  img{
+    width: 100%;
+    height: 100%;
+    max-height: 284rem;
+  }
 }
 .community-top{
   position: absolute;
-  top: 40%;
+  top: 240rem;
   left: 0;
   right: 0;
   z-index: 2;
@@ -190,7 +221,7 @@
 }
 .community-center{
   position: absolute;
-  top: 60%;
+  top: 490rem;
   left: 0;
   right: 0;
   z-index: 4;
@@ -206,8 +237,8 @@
 }
 .community-bottom{
   position: absolute;
-  top: 80%;
-  max-height: 270rem;
+  top: 820rem;
+  max-height: 300rem;
   overflow: hidden;
   left: 0;
   right: 0;

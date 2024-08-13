@@ -1,4 +1,4 @@
-const locomotiveScroll = new LocomotiveScroll();
+ const locomotiveScroll = new LocomotiveScroll();
 
 
 // $(document).ready(function() {
@@ -29,12 +29,20 @@ $('.header-button').on('click', function (e) {
   const ths = $(this);
     ths.find('span').toggleClass('hidden');
     $('.header-nav').toggleClass('open');
+    $('.header-overlay').toggleClass('open');
+});
+$('.header-overlay').on('click', function (e) {
+  const ths = $(this);
+    $('.header-button').find('span').toggleClass('hidden');
+    $('.header-nav').removeClass('open');
+    $('.header-overlay').removeClass('open');
 });
 $('.header-nav a').on('click', function (e) {
   e.preventDefault();
   const ths = $(this);
-    $('.header-button').find('span').toggleClass('hidden');
-    $('.header-nav').toggleClass('open');
+  $('.header-button').find('span').toggleClass('hidden');
+  $('.header-nav').removeClass('open');
+  $('.header-overlay').removeClass('open');
 });
 window.addEventListener('progressEvent', (e) => {
   const { target, progress } = e.detail;
@@ -55,7 +63,7 @@ $('.play-btn').on('click', function (e) {
   $('.popup-video').addClass('active').find('video').attr('src', tVideo);
   $('.popup-video').find('video').attr('autoplay', 'true');
 });
-$('.close-popup').on('click', function (e) {
+$('.close-popup, .popup-overlay').on('click', function (e) {
   var $this = $(this);
   $this.parent().removeClass('active');
   $('body').removeClass('scroll');
@@ -65,28 +73,48 @@ $('.close-popup').on('click', function (e) {
 
 window.addEventListener("progressEvent", (e) => {
   const { progress } = e.detail;
+
   if(progress >= 0.2539680028129395){
-    $('.chart-container').addClass('active');
-    $('.circle-chart-circle').css('animation', 'circle-chart-fill 1.35s reverse');
-    $('.circle-chart-one').css('animation', 'circle-chart-fill 2s reverse');
-    $('.circle-chart-two').css('animation', 'circle-chart-fill 1.7s reverse');
-    $('.circle-chart-three').css('animation', 'circle-chart-fill 1.7s  reverse');
+    $('.circle-chart-one').find('.circle-chart-circle').attr('stroke-dasharray', '84,100');
+    $('.circle-chart-two').find('.circle-chart-circle').attr('stroke-dasharray', '91,100');
+    $('.circle-chart-three').find('.circle-chart-circle').attr('stroke-dasharray', '100,100');
     setTimeout(function (e) {
       $('.chart-container-info').addClass('active');
-    }, 2000)
+    }, 2500)
   } else{
-    $('.chart-container, .chart-container-info').removeClass('active');
-    $('.circle-chart-circle').css('animation', ' none');
-    $('.circle-chart-one').css('animation', 'none');
-    $('.circle-chart-two').css('animation', 'none');
-    $('.circle-chart-three').css('animation', 'none');
+
+  }
+});
+window.addEventListener("progressEventSecond", (e) => {
+  const { progress } = e.detail;
+
+  if(progress >= 0.2){
+    $('.circle-chart-one').find('.circle-chart-circle').attr('stroke-dasharray', '94,100');
+    $('.circle-chart-three').find('.circle-chart-circle').attr('stroke-dasharray', '100,100');
+    setTimeout(function (e) {
+      $('.chart-container-info').addClass('active');
+    }, 2500)
+  } else{
+
   }
 });
 window.addEventListener("progressEventComparison", (e) => {
   const { progress } = e.detail;
-  if(progress >= 0.2539680028129395){
+  if(progress >= 0.35){
     $('.comparison-wrap').addClass('active');
-  } else{
-    $('.comparison-wrap').removeClass('active');
   }
+});
+window.addEventListener("eventFadeOut", (e) => {
+  const { progress } = e.detail;
+    if(progress >= 0.65){
+        $('.eventFadeOut').css('opacity', progress - .7);
+    }
+    else{
+        $('.eventFadeOut').css('opacity', '1');
+    }
+    if(progress >= 0.9){
+        $('.eventFadeOut').addClass('active');
+    }else{
+        $('.eventFadeOut').removeClass('active');
+    }
 });

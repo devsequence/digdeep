@@ -3,6 +3,9 @@
   margin-left: 60rem;
   background-color: #021a40;
   padding: 35rem 0 60rem;
+  .copy{
+    display: none;
+  }
   .logo-item{
     &__link{
       max-width: 200rem;
@@ -17,6 +20,7 @@
     .copy{
       font: 400 14rem/100% $font-Founders-Grotesk-Light ;
       color: $white-100;
+      display: block;
     }
   }
   .container{
@@ -37,10 +41,10 @@
     }
     ul{
       li{
-        margin-bottom: 3rem;
+        margin-bottom: 4rem;
       }
       li, a{
-        font: 400 16rem/100% $font-Founders-Grotesk-Light ;
+        font: 400 14rem/100% $font-Founders-Grotesk-Light ;
         color: $white-100;
       }
       a{
